@@ -18,6 +18,9 @@ jobs:
       - name: Link stage-gated items to project
         uses: actions/add-to-project@v0.5.0
         with:
-          project-url: https://github.com/orgs/JonEliRey/projects/1
+          # Update this URL to point to your GitHub Project
+          # For user projects: https://github.com/users/USERNAME/projects/NUMBER
+          # For org projects: https://github.com/orgs/ORGNAME/projects/NUMBER
+          project-url: https://github.com/users/JonEliRey/projects/1
           github-token: ${{ secrets.GITHUB_TOKEN }}
           labeled: stage/pillars, stage/paths, stage/courses, stage/modules, stage/lessons
