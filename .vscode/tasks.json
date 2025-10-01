@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run specify create-new-feature",
+			"type": "shell",
+			"command": "pwsh",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				".specify/scripts/powershell/create-new-feature.ps1",
+				"-Json",
+				"I need to create the super intelligent course designer workflow to build content for YouTube and Paid Learning Academy, in a strategic manner. Production shoud be in stages, starting from a high level pillars and discussing wiht the user to ensure alignment, before moving to the next level of detail. This shoudl fuction as a true learning development agency with multiple personas envolve.And the human as the Executive producer. \n\n The goal is that content woudl be produce for YouTube, blogs and eventually lead to paid subscribers. Youtube and blogs would seve as the start of a sales funnel which woudl eventually drive users to join the subcribtion portal. The structure of the content should be similar to what is done in other learning portals, for exampl:  modules, courses and learning paths, as done in LinkedIn Learning. This content should be highly relevant and up-to-date, about the current state of the tools as well as design the best learning experience for the users. \n\nThis course designer workflow should be able to help me build content that is well structure, and highly relevant to users. Also, as we produce subsquent content it shoudl help me keep track of what has been produce and refer to those items when necessary in future lessons. Additionally, it shoudl help me highlight when part of the content needs update due to updated tools or documentation.\n\nAdditionally, I would like the workflow to also help me produce content the distills the publication from official sites so I can explain it to the audience in simple terms and give them an idean of how this iterms apply to them. Thus making it simple for them to understand subjects that may be too complex and/or help them visualize (imagine) how this could help them."
+			]
+		}
+	]
+}
