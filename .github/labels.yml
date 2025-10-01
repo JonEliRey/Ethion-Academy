@@ -1,0 +1,17 @@
+# Repository labels (apply with a labeler or via one-time import)
+# Tip: Use an action like crazy-max/ghaction-github-labeler to sync these into the repo.
+- name: stage/pillars
+  color: "0366d6"
+  description: "Stage gate — Pillars"
+- name: stage/paths
+  color: "0e8a16"
+  description: "Stage gate — Learning Paths"
+- name: stage/courses
+  color: "fbca04"
+  description: "Stage gate — Courses"
+- name: stage/modules
+  color: "7057ff"
+  description: "Stage gate — Modules"
+- name: stage/lessons
+  color: "d93f0b"
+  description: "Stage gate — Lessons"
