@@ -1,0 +1,37 @@
+name: Pillar Proposal
+description: Propose or revise top-level pillars
+labels: ["stage/pillars"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Opportunity
+      description: What learner or business problem are we solving?
+    validations:
+      required: true
+  - type: textarea
+    id: pillars
+    attributes:
+      label: Proposed Pillars (3–7)
+      description: List each pillar with 1–2 sentence rationale
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence & Demand Signals
+      description: Cite official docs, community demand, or market data (links)
+    validations:
+      required: true
+  - type: input
+    id: audience
+    attributes:
+      label: Target Audience Segment(s)
+      description: role × level (e.g., analyst-beginner, engineer-intermediate)
+    validations:
+      required: true
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: topic, format, source-type, tech/stack
