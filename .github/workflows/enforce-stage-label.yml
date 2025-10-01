@@ -1,0 +1,35 @@
+name: Enforce Stage Label
+
+on:
+  pull_request:
+    types: [opened, labeled, unlabeled, synchronize]
+
+jobs:
+  check-stage-label:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      issues: read
+    steps:
+      - name: Check for stage label
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const labels = context.payload.pull_request.labels.map(label => label.name);
+            const stageLabels = labels.filter(label => label.startsWith('stage/'));
+
+            if (stageLabels.length === 0) {
+              core.setFailed('Pull request must have at least one stage label (stage/pillars, stage/paths, stage/courses, stage/modules, or stage/lessons)');
+
+              // Add a comment to guide the user
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body: '⚠️ This PR requires a stage label. Please add one of the following labels:\n\n- `stage/pillars` - Stage gate: Pillars\n- `stage/paths` - Stage gate: Learning Paths\n- `stage/courses` - Stage gate: Courses\n- `stage/modules` - Stage gate: Modules\n- `stage/lessons` - Stage gate: Lessons\n\nThese labels are used to route the PR through the appropriate review stages in the GitHub Project.'
+              });
+            } else if (stageLabels.length > 1) {
+              core.setFailed(`Pull request should have exactly one stage label, but has ${stageLabels.length}: ${stageLabels.join(', ')}`);
+            } else {
+              console.log(`✅ PR has valid stage label: ${stageLabels[0]}`);
+            }

@@ -1,0 +1,138 @@
+name: Pillar Proposal
+description: Propose a new high-level content pillar for Ethion Academy
+title: "[PILLAR] "
+labels: ["stage/pillars"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Pillar Proposal
+        Use this template to propose a new high-level content pillar. Pillars represent strategic directions for content development and must be approved by the Executive Producer before proceeding to Learning Paths.
+
+  - type: input
+    id: pillar-name
+    attributes:
+      label: Pillar Name
+      description: What is the name of this pillar?
+      placeholder: e.g., "Data Analytics Fundamentals"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a high-level description of this pillar
+      placeholder: What topics and themes does this pillar encompass?
+    validations:
+      required: true
+
+  - type: textarea
+    id: target-audience
+    attributes:
+      label: Target Audience
+      description: Who is this pillar designed for?
+      placeholder: |
+        - Role: analyst/engineer/manager
+        - Level: beginner/intermediate/advanced
+        - Background/prerequisites
+    validations:
+      required: true
+
+  - type: textarea
+    id: demand-signals
+    attributes:
+      label: Demand Signals & Evidence
+      description: What evidence supports the need for this pillar?
+      placeholder: |
+        - Job market trends
+        - Search volume data
+        - Community requests
+        - Industry reports
+        - Competitor analysis
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Official Sources & Documentation
+      description: List primary sources and official documentation
+      placeholder: |
+        - [Official docs](url)
+        - [Product documentation](url)
+        - [Community resources](url)
+    validations:
+      required: true
+
+  - type: textarea
+    id: learning-paths
+    attributes:
+      label: Potential Learning Paths
+      description: What learning paths might fall under this pillar?
+      placeholder: |
+        List 3-7 potential learning paths that would be part of this pillar
+        - Learning Path 1
+        - Learning Path 2
+        - Learning Path 3
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: What is the priority level for this pillar?
+      options:
+        - High - Critical for strategy
+        - Medium - Important but not urgent
+        - Low - Nice to have
+    validations:
+      required: true
+
+  - type: dropdown
+    id: freshness-tier
+    attributes:
+      label: Freshness Tier
+      description: How frequently should this content be reviewed?
+      options:
+        - Fast (90 days) - Rapidly changing technology
+        - Standard (180 days) - Stable technology
+    validations:
+      required: true
+
+  - type: textarea
+    id: funnel-strategy
+    attributes:
+      label: Sales Funnel Strategy
+      description: How will this pillar drive the sales funnel?
+      placeholder: |
+        - Top of funnel: YouTube videos on...
+        - Middle of funnel: Blog posts about...
+        - Bottom of funnel: Paid academy courses covering...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information
+      placeholder: Add any additional context, constraints, or considerations
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Ensure you've completed these items before submitting
+      options:
+        - label: I have researched existing content to avoid duplication
+          required: true
+        - label: I have cited official sources and evidence
+          required: true
+        - label: I have considered the target audience and their needs
+          required: true
+        - label: I understand this requires Executive Producer approval before proceeding
+          required: true

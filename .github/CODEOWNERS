@@ -1,0 +1,26 @@
+# CODEOWNERS for Ethion Academy
+# This file defines who is responsible for reviewing changes to specific parts of the repository.
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global owners - Executive Producer has final say on all content
+* @JonEliRey
+
+# Constitution and governance documents require Executive Producer approval
+/CONSTITUTION.md @JonEliRey
+/README.md @JonEliRey
+/docs/governance/ @JonEliRey
+
+# Feature specifications require review
+/specs/ @JonEliRey
+
+# Content inventory and planning data
+/content-inventory/ @JonEliRey
+
+# SEO and topic clusters
+/seo/ @JonEliRey
+
+# GitHub workflows and automation
+/.github/ @JonEliRey
+
+# Specify templates and scripts
+/.specify/ @JonEliRey
