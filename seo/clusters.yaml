@@ -1,0 +1,15 @@
+# Topic clusters (initial stub)
+clusters:
+  - id: data-analytics-foundations
+    pillar: "Data Analytics Foundations"
+    keywords:
+      primary: ["data analytics basics", "business intelligence"]
+      secondary: ["etl vs elt", "kpis vs metrics"]
+    targetSegments:
+      - role: analyst
+        level: beginner
+    links:
+      pillarPage: "/pillars/data-analytics-foundations"
+      relatedPaths: ["Analyst Beginner"]
+    refresh: quarterly
+    notes: "TOFU/MOFU assets link into Analyst Beginner path and related modules"
