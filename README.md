@@ -4,6 +4,7 @@ A stage‑gated, evidence‑driven workflow to design and publish learning conte
 
 ## What’s in here
 - CONSTITUTION.md — minimal rules for hierarchy, tagging, evidence, and Definition of Done
+- .github/projects.yml — GitHub Projects custom fields configuration (field definitions and valid options)
 - specs/ — feature specifications created via the Specify flow
 - content-inventory/ — canonical inventory location (SQLite db + exports)
 - seo/ — topic clusters and SEO planning

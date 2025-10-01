@@ -1,0 +1,80 @@
+# GitHub Projects Configuration
+# This file documents the expected custom fields for the Course Designer Workflow project
+# Use this as a reference when configuring GitHub Projects v2 custom fields
+
+project:
+  name: "Course Designer Workflow"
+  description: "Stage-gated content production workflow from Pillars to Lessons"
+  
+  # Custom Fields Configuration
+  fields:
+    - name: "Stage"
+      type: "single_select"
+      description: "Current stage gate in the workflow"
+      options:
+        - "Pillars"
+        - "Learning Paths"
+        - "Courses"
+        - "Modules"
+        - "Lessons"
+    
+    - name: "Expertise Level"
+      type: "single_select"
+      description: "Target audience expertise level"
+      options:
+        - "Beginner"      # Correct spelling
+        - "Intermediate"
+        - "Advanced"      # Correct spelling
+    
+    - name: "Role"
+      type: "single_select"
+      description: "Target audience role"
+      options:
+        - "Data/Business Analyst"
+        - "Software/Automation Engineer"
+        - "Manager/Leader"
+    
+    - name: "Status"
+      type: "single_select"
+      description: "Production status"
+      options:
+        - "Backlog"
+        - "In Progress"
+        - "In Review"
+        - "Approved"
+        - "Published"
+    
+    - name: "Priority"
+      type: "single_select"
+      description: "Priority based on demand signals"
+      options:
+        - "High"
+        - "Medium"
+        - "Low"
+    
+    - name: "Freshness"
+      type: "single_select"
+      description: "Content freshness status"
+      options:
+        - "Current"
+        - "Needs Review"
+        - "Outdated"
+
+  # Column Configuration (Status-based)
+  columns:
+    - name: "Backlog"
+      description: "Items awaiting stage gate approval"
+    - name: "In Progress"
+      description: "Active development"
+    - name: "In Review"
+      description: "Pending Executive Producer approval"
+    - name: "Approved"
+      description: "Ready for next stage or production"
+    - name: "Published"
+      description: "Content published and live"
+
+# Notes:
+# - Field options are case-sensitive
+# - "Expertise Level" field must use: "Beginner", "Intermediate", "Advanced"
+# - Avoid typos: "Begginer" → "Beginner", "Advance" → "Advanced"
+# - This configuration aligns with CONSTITUTION.md tagging rules
