@@ -21,6 +21,12 @@ A stage‑gated, evidence‑driven workflow to design and publish learning conte
 - Monitoring: Weekly light scans, monthly full review, real‑time alerts; freshness SLA 90/180 days
 - Licensing: MIT for code; CC BY 4.0 for public content; CC BY‑NC 4.0 for paid academy content
 
+## Automation
+- GitHub Actions workflows for label sync, project integration, and stage updates
+- PR templates for each stage gate (pillars, paths, courses, modules, lessons)
+- Setup guide: ./docs/AUTOMATION_SETUP.md
+- Workflow docs: ./.github/workflows/README.md
+
 ## Links
 - Constitution: ./CONSTITUTION.md
 - Primary spec: ./specs/001-i-need-to/spec.md
