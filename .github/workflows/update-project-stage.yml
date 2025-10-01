@@ -1,0 +1,76 @@
+name: Update Project Stage
+
+on:
+  pull_request:
+    types:
+      - labeled
+      - unlabeled
+  issues:
+    types:
+      - labeled
+      - unlabeled
+
+jobs:
+  update-stage:
+    name: Update project stage field from label
+    runs-on: ubuntu-latest
+    # Only run if PROJECT_URL is configured
+    if: vars.PROJECT_URL != ''
+    steps:
+      - name: Update project field
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GH_PROJECT_TOKEN }}
+          script: |
+            // Map stage labels to project field values
+            const stageLabels = {
+              'stage/pillars': 'Pillars',
+              'stage/paths': 'Paths',
+              'stage/courses': 'Courses',
+              'stage/modules': 'Modules',
+              'stage/lessons': 'Lessons'
+            };
+            
+            // Get current labels
+            const labels = context.payload.pull_request?.labels || context.payload.issue?.labels || [];
+            
+            // Find stage label
+            let stageValue = null;
+            for (const label of labels) {
+              if (stageLabels[label.name]) {
+                stageValue = stageLabels[label.name];
+                break;
+              }
+            }
+            
+            if (!stageValue) {
+              console.log('No stage label found, skipping project update');
+              return;
+            }
+            
+            console.log(`Found stage label: ${stageValue}`);
+            
+            // Get project URL from vars
+            const projectUrl = process.env.PROJECT_URL;
+            if (!projectUrl) {
+              console.log('PROJECT_URL not configured');
+              return;
+            }
+            
+            // Extract owner and project number from URL
+            // Format: https://github.com/orgs/ORG/projects/NUM or https://github.com/users/USER/projects/NUM
+            const urlMatch = projectUrl.match(/github\.com\/(orgs|users)\/([^/]+)\/projects\/(\d+)/);
+            if (!urlMatch) {
+              console.log('Invalid PROJECT_URL format');
+              return;
+            }
+            
+            const [, ownerType, ownerName, projectNumber] = urlMatch;
+            
+            // Get the item node ID
+            const itemNodeId = context.payload.pull_request?.node_id || context.payload.issue?.node_id;
+            
+            console.log(`Updating project field for ${itemNodeId} to stage: ${stageValue}`);
+            console.log('Note: Full implementation requires project field ID and option ID mapping');
+        env:
+          PROJECT_URL: ${{ vars.PROJECT_URL }}

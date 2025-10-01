@@ -1,0 +1,22 @@
+name: Add to Project
+
+on:
+  issues:
+    types:
+      - opened
+  pull_request_target:
+    types:
+      - opened
+
+jobs:
+  add-to-project:
+    name: Add issue/PR to project
+    runs-on: ubuntu-latest
+    # Only run if PROJECT_URL is configured
+    if: vars.PROJECT_URL != ''
+    steps:
+      - name: Add to project
+        uses: actions/add-to-project@v0.5.0
+        with:
+          project-url: ${{ vars.PROJECT_URL }}
+          github-token: ${{ secrets.GH_PROJECT_TOKEN }}
