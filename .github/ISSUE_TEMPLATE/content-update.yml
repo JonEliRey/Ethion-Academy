@@ -1,0 +1,82 @@
+name: Content Update Alert
+description: Flag content that needs update due to source changes or freshness SLA
+title: "[UPDATE]: "
+labels: ["content-update"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to flag content that needs updating due to tool/documentation changes or freshness SLA breaches.
+
+  - type: dropdown
+    id: update-type
+    attributes:
+      label: Update Type
+      description: What triggered this update?
+      options:
+        - Source documentation changed
+        - Tool/product updated
+        - Freshness SLA breach (90-day)
+        - Freshness SLA breach (180-day)
+        - Community feedback/correction
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-content
+    attributes:
+      label: Affected Content
+      description: Which learning paths, courses, modules, or lessons are impacted?
+      placeholder: |
+        - Learning Path: [name]
+        - Course: [name]
+        - Module: [name]
+        - Lesson: [name]
+        - Assets: [YouTube videos, blog posts, etc.]
+    validations:
+      required: true
+
+  - type: textarea
+    id: changes
+    attributes:
+      label: What Changed?
+      description: Describe the changes that necessitate an update
+      placeholder: |
+        - Link to official changelog or announcement
+        - Description of what changed
+        - Impact on existing content
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgent is this update?
+      options:
+        - Critical (breaking change)
+        - High (significant impact)
+        - Medium (moderate impact)
+        - Low (minor refinement)
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-updates
+    attributes:
+      label: Proposed Updates
+      description: What changes should be made to address this?
+      placeholder: Outline the recommended updates to content
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact-map
+    attributes:
+      label: Impact Map
+      description: List all potentially affected sections, lessons, or assets
+      placeholder: |
+        - Specific sections that need revision
+        - Dependencies or related content
+        - Cross-references to update

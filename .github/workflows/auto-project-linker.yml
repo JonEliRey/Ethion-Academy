@@ -1,0 +1,23 @@
+name: Auto Link to Project
+
+on:
+  pull_request:
+    types: [opened, labeled, reopened]
+  issues:
+    types: [opened, labeled, reopened]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  link-to-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Link stage-gated items to project
+        uses: actions/add-to-project@v0.5.0
+        with:
+          project-url: https://github.com/orgs/JonEliRey/projects/1
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          labeled: stage/pillars, stage/paths, stage/courses, stage/modules, stage/lessons

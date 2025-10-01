@@ -1,0 +1,20 @@
+# CODEOWNERS for Ethion Academy
+# 
+# These owners will be requested for review when someone opens a pull request.
+# Executive Producer and SME reviewers are required per the stage-gate workflow (FR-017).
+#
+# For more information: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything in the repo
+* @JonEliRey
+
+# Specifications and documentation require Executive Producer review
+/specs/ @JonEliRey
+/docs/ @JonEliRey
+/CONSTITUTION.md @JonEliRey
+
+# Content inventory requires approval
+/content-inventory/ @JonEliRey
+
+# SEO planning requires review
+/seo/ @JonEliRey

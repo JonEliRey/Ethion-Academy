@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Constitution
+    url: https://github.com/JonEliRey/Ethion-Academy/blob/main/CONSTITUTION.md
+    about: Review the Agent Constitution for guidelines and requirements
+  - name: Feature Specification
+    url: https://github.com/JonEliRey/Ethion-Academy/blob/main/specs/001-i-need-to/spec.md
+    about: Read the Super-Intelligent Course Designer Workflow specification

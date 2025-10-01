@@ -1,0 +1,90 @@
+name: Stage Gate Review
+description: Request review and approval for a stage in the content development workflow
+title: "[STAGE]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request review and approval for a stage-gated deliverable (Pillars → Paths → Courses → Modules → Lessons).
+
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Stage
+      description: Which stage gate is this for?
+      options:
+        - Pillars
+        - Learning Paths
+        - Courses
+        - Modules
+        - Lessons
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide an overview of what is being submitted for review
+      placeholder: Describe the content, deliverables, and scope
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence & Rationale
+      description: Provide citations, demand signals, and evidence supporting this work
+      placeholder: |
+        - Official documentation links
+        - Community demand signals (Reddit threads, Stack Overflow questions, etc.)
+        - Search trends or engagement metrics
+        - Prerequisites and dependencies
+    validations:
+      required: true
+
+  - type: textarea
+    id: tags
+    attributes:
+      label: Tags
+      description: List the tags that apply (topic, level, role, format, etc.)
+      placeholder: |
+        - topic: [e.g., power-bi, data-analysis]
+        - level: [beginner/intermediate/advanced]
+        - role: [analyst/engineer/manager]
+        - format: [video/blog/lesson]
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Deliverables
+      description: What specific items are included in this stage submission?
+      placeholder: |
+        - List specific content items
+        - Reference file paths or locations
+        - Link to draft PRs if applicable
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Definition of Done
+      description: Confirm that DoD criteria are met
+      options:
+        - label: Evidence and citations included
+        - label: Tags applied consistently
+        - label: Objectives are measurable and testable
+        - label: Prerequisites are explicit
+        - label: Aligns with Constitution requirements
+        - label: Content inventory updated (if applicable)
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Any other context or information for reviewers
+      placeholder: Optional additional context
