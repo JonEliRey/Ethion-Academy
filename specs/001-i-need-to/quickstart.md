@@ -18,7 +18,9 @@ This guide provides a step-by-step validation scenario to test the complete Supe
 - SQLite 3.x (for database operations)
 
 ### Repository Setup
-1. Clone repository: `git clone https://github.com/[org]/Ethion-Academy.git`
+1. Clone repository:  
+   `git clone https://github.com/<your-org-or-username>/Ethion-Academy.git`  
+   <!-- Replace <your-org-or-username> with your GitHub organization or username -->
 2. Navigate to directory: `cd Ethion-Academy`
 3. Verify structure:
    ```bash
