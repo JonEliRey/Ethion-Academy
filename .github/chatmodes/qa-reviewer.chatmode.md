@@ -1,4 +1,3 @@
-```chatmode
 ---
 description: 'Final quality gate before content approval'
 tools: ['codebase', 'editFiles', 'problems']

@@ -1,4 +1,3 @@
-```prompt
 ---
 mode: 'librarian'
 description: 'Guide Librarian through content cataloging and cross-referencing'

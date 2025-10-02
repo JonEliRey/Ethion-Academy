@@ -1,4 +1,3 @@
-```prompt
 ---
 mode: 'editor'
 description: 'Guide Editor through comprehensive content quality review'

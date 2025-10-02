@@ -1,4 +1,3 @@
-```instructions
 ---
 description: 'Agent handoff message format and transition rules'
 applyTo: '**/*.md'

@@ -1,4 +1,3 @@
-```prompt
 ---
 mode: 'scriptwriter'
 description: 'Guide Scriptwriter through creating comprehensive lesson outlines and briefs'

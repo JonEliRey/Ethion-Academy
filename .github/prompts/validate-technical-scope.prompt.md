@@ -1,4 +1,3 @@
-```prompt
 ---
 mode: 'sme'
 description: 'Guide SME through technical validation of content proposals'

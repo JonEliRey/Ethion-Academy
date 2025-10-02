@@ -1,4 +1,3 @@
-```prompt
 ---
 mode: 'content-strategist'
 description: 'Interactive workflow for creating learning paths under an approved pillar'

@@ -1,4 +1,3 @@
-```prompt
 ---
 mode: 'content-strategist'
 description: 'Interactive workflow to guide Content Strategist through pillar creation'

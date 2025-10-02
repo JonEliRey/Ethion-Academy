@@ -1,4 +1,3 @@
-```chatmode
 ---
 description: 'Discoverability optimizer and keyword strategist'
 tools: ['search', 'fetch', 'codebase', 'editFiles']

@@ -1,4 +1,3 @@
-```chatmode
 ---
 description: 'Strategic content planner analyzing demand and defining pillars'
 tools: ['search', 'fetch', 'codebase']

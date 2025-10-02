@@ -1,4 +1,3 @@
-```chatmode
 ---
 description: 'Lesson outline and video brief creator'
 tools: ['search', 'fetch', 'codebase', 'editFiles']

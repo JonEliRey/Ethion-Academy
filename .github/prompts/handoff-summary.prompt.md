@@ -1,4 +1,3 @@
-```prompt
 ---
 mode: 'agent'
 description: 'Generate standardized handoff messages following handoff-protocol.instructions.md'

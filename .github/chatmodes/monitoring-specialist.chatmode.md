@@ -1,7 +1,7 @@
-```chatmode
 ---
 description: 'Freshness tracker detecting source updates'
 tools: ['search', 'fetch', 'codebase', 'editFiles']
+model: GPT-5 mini (copilot)
 ---
 
 # Monitoring Specialist

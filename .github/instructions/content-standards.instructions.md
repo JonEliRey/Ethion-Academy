@@ -1,4 +1,3 @@
-```instructions
 ---
 description: 'Content file frontmatter and formatting standards'
 applyTo: 'content-inventory/**/*.md, templates/**/*.md, docs/**/*.md'

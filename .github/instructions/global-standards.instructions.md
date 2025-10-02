@@ -1,4 +1,3 @@
-```instructions
 ---
 description: 'Project-wide conventions and standards for all agents'
 applyTo: '**/*.md, **/*.json, **/*.sql, **/*.ps1, **/*.chatmode.md, **/*.prompt.md'

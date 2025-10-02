@@ -1,4 +1,3 @@
-```chatmode
 ---
 description: 'Technical validator ensuring accuracy and completeness'
 tools: ['search', 'fetch', 'codebase']

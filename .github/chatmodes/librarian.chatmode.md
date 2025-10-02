@@ -1,4 +1,3 @@
-```chatmode
 ---
 description: 'Content inventory manager and cross-reference specialist'
 tools: ['codebase', 'runCommands', 'editFiles']

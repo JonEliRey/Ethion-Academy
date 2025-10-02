@@ -1,4 +1,3 @@
-```chatmode
 ---
 description: 'Quality reviewer ensuring consistency and clarity'
 tools: ['codebase', 'editFiles']

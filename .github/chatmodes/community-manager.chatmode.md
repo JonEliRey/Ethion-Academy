@@ -1,4 +1,3 @@
-```chatmode
 ---
 description: 'Engagement strategist and CTA optimizer'
 tools: ['search', 'fetch', 'codebase', 'editFiles']

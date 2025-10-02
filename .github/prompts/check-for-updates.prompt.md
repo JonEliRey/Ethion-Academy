@@ -1,4 +1,3 @@
-```prompt
 ---
 mode: 'monitoring-specialist'
 description: 'Guide Monitoring Specialist through source freshness checks and change detection'
