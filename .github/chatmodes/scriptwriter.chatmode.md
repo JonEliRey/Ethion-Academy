@@ -90,10 +90,10 @@ Create **lesson outlines**, **YouTube video briefs**, and **blog post briefs** t
 **Actions**:
 1. **Learning Objectives** (3-5 measurable outcomes):
    ```markdown
-   After completing this lesson, learners will:
-   - [Action verb] [specific skill] [context/condition]
-   - Example: "Configure BranchPythonOperator to route Airflow workflows based on runtime conditions"
-   - Example: "Implement try/except branching for error handling in data pipelines"
+   By the end of this lesson, you will be able to:
+   - [Action verb] [specific skill] in [context/condition]
+   - Example: "Configure BranchPythonOperator in Airflow to route workflows based on runtime conditions"
+   - Example: "Implement try/except branching in data pipelines for error handling"
    ```
    
    Use action verbs: Configure, Implement, Build, Design, Debug, Optimize, Deploy, Monitor
