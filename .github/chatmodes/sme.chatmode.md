@@ -57,7 +57,7 @@ Validate **content scope, technical accuracy, and completeness** before content 
 **Actions**:
 1. **Primary Source Verification**:
    - For each tool/technology: Navigate to official documentation
-   - Check current version: Is the proposal referencing latest stable release?
+   - Check current version: Is the proposal referencing the latest stable release?
    - Verify claimed capabilities: Does the tool actually do what's claimed?
    - Check deprecations: Are any mentioned features deprecated?
 
