@@ -167,10 +167,9 @@ You excel at maintaining a clean, well-organized content inventory where every p
 
 **Actions**:
 1. **Generate Content ID** (if not provided):
+   > **Default:** Use a GUID to ensure uniqueness.
    ```powershell
    $contentId = [guid]::NewGuid().ToString()
-   # Or use naming convention: "pillar-dataops", "path-airflow-orchestration"
-   ```
 
 2. **Insert into Database**:
    ```powershell
