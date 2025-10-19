@@ -356,7 +356,7 @@ try {
 ### Manual Testing - REQUIRED
 Before marking any feature complete:
 
-1. **Execute Quickstart Scenario**: Follow `specs/001-i-need-to/quickstart.md` step-by-step
+1. **Execute Quickstart Scenario**: Follow `docs/Reference/quickstart.md` step-by-step
 2. **Test All Agent Handoffs**: Manually invoke each agent and verify handoff messages
 3. **Verify Database Operations**: Insert sample data, query, export to JSON
 4. **Review Outputs**: Check exported JSON/YAML files for correctness

@@ -210,7 +210,7 @@ This is NOT a traditional application with src/ and tests/. Instead:
 - **`.github/instructions/`**: Global standards for all agents
 - **`.vscode/prompts/`**: Reusable workflow prompts
 - **`content-inventory/`**: SQLite database for content tracking
-- **`docs/001-i-need-to/plan/`**: Design artifacts from this planning phase
+- **`docs/Reference/plan/`**: Design artifacts from this planning phase
 - **`templates/`**: Content structure templates for actual curriculum (used later)
 
 The "source code" is Markdown-based agent definitions and database schema, not traditional programming language code.
@@ -372,7 +372,7 @@ tools: ['codebase', 'search', 'fetch', 'runCommands', 'editFiles']
 - Files stored in `.github/chatmodes/`
 - Naming: `agent-name.chatmode.md`
 
-### 3. Workflow Documentation → `docs/001-i-need-to/plan/workflows/`
+### 3. Workflow Documentation → `docs/Reference/plan/workflows/`
 
 **`handoff-protocol.md`**: Handoff message format specification
 ```markdown
@@ -407,7 +407,7 @@ tools: ['codebase', 'search', 'fetch', 'runCommands', 'editFiles']
 
 **`agent-flow.md`**: Narrative description + ASCII diagram of agent interactions
 
-### 4. Example Scenarios → `docs/001-i-need-to/plan/examples/`
+### 4. Example Scenarios → `docs/Reference/plan/examples/`
 
 **`scenario-01-create-pillar.md`**: Complete conversation from idea → approved pillar
 - Shows: Content Strategist → SME → Executive Producer handoffs

@@ -1,0 +1,13 @@
+# Ignore all markdown files (temporary working files)
+*.md
+
+# Keep the README
+!README.md
+
+# Ignore backup files
+*.bak
+*~
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
