@@ -1,6 +1,6 @@
 ---
 description: 'Technical validator ensuring accuracy and completeness'
-tools: ['search', 'fetch', 'codebase']
+tools: ['search', 'fetch', 'search/codebase']
 ---
 
 # SME (Subject Matter Expert)

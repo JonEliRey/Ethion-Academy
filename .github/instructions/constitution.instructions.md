@@ -1,131 +1,85 @@
 ---
-description: 'Agent constitution for the learning content builder system'
-applyTo: '**/*.md, **/*.json, **/*.sql, **/*.ps1, **/*.chatmode.md, **/*.prompt.md'
+description: "Authoritative constitution for Ethion Academy – principles, architecture, workflow, and governance"
+applyTo: "**"
 ---
 
-# Agent Constitution: Learning Content Builder
+# Ethion Academy Constitution
 
-_Last updated: 2025-10-01_
+## Core Principles
 
-## 1. Purpose
-Define the minimum rules, structure, and expected outputs for the agent-based workflow that builds high-quality learning content from public sources and real learner demand.
+### I. Local-first, scoped context
+Agents load context closest to the work first (localized `Agents.md`, content directory, adjacent specs), with minimal global instructions. This reduces ambiguity, improves performance, and keeps decisions near their domain. Global docs exist to unify standards, not to override domain-specific rules without cause.
 
-## 2. Scope
-- **Domains**: Any technical or non-technical subject
-- **Sources**: Official documentation, reputable blogs, YouTube channels, release notes, standards, high-signal community threads
-- **Audience**: Learners and instructors across multiple roles and skill levels
+### II. Autonomous execution with visibility
+Agents execute end-to-end without pausing for user input once started, providing concise status updates and producing observable artifacts (working files, deliverables, logs). Human reviews happen at explicit stage gates or handoffs—not during the middle of execution.
 
-## 3. Core Principles
-- **Evidence-driven**: Support every topic with cited sources or clear demand signals
-- **Learner-centered**: Prioritize common pain points and search intent from communities
-- **Minimal duplication**: Reuse and consolidate overlapping topics; avoid redundancy
-- **Transparency**: Maintain citations, timestamps, and extraction notes
-- **Compliance**: Respect copyright, paraphrase when possible, attribute sources
-- **Quality bar**: Objectives must be testable, prerequisites explicit, tags consistent
+### III. Handoff protocol and AgentGraph
+All cross-agent transitions use the standard, 9-component handoff message. Allowed adjacencies and invariants are defined in the AgentGraph. Avoid circular loops beyond two cycles; escalate to the Executive Producer when necessary.
 
-## 4. Allowed Inputs
-- Official docs, blogs, changelogs, standards, and official YouTube channels
-- Credible community sources (e.g., SQL.BI, PowerBI.Tips, GuyInACube)
-- Q/A forums and boards with active learner demand (Reddit, Stack Overflow, product forums)
-- When sources conflict, prefer the latest official guidance
+### IV. Stage gates and quality gates
+Work proceeds through clear stages (plan → research → script → review → publish) with measurable quality checks at each gate. No stage advances without passing its quality gate.
 
-## 5. Required Outputs
-- Hierarchical plan: Learning Paths → Courses → Modules → Lessons
-- Complete tagging across all levels for discovery
-- Machine-readable export (JSON/YAML) plus human-readable summary
-- Complete citations with rationale and freshness timestamps
+### V. Simplicity and DRY
+Prefer simple, direct solutions. Avoid duplication. Use kebab-case naming, small focused files, and clear contracts. Centralize only what’s broadly shared; keep everything else local to its scope.
 
-## 6. Repository & Workflow Governance
-- Repository: `https://github.com/JonEliRey/Ethion-Academy`
-- Primary branch: `main`
-- Stage order: Pillar → Path → Course → Module → Lesson
-- Maintain `CHANGELOG.md` with rationale and evidence links for major updates
-- Commit frequently with clear messages; adhere to protected branch policies
+### VI. Observability and traceability
+Follow the working-file lifecycle. Persist intermediate work, decisions, and sources in repo-visible artifacts. Ensure deliverables and their provenance (inputs, sources, tests) are auditable.
 
-## 7. Knowledge Hierarchy Requirements
-1. **Learning Path**: title, description, audience, prerequisites, estimated duration, tags
-2. **Course**: title, outcome, prerequisites, assessment approach, duration, tags
-3. **Module**: title, description, prerequisites, duration, tags
-4. **Lesson**: title, measurable objectives, prerequisites, duration, outline, practice, key terms, citations, tags, "Leader’s Lens" (business value, decision/trade-offs, risks/assumptions, KPIs)
+### VII. Versioning and change management
+Document breaking changes. Use approval checkpoints for major shifts to governance or structure. Maintain changelogs where impact is non-trivial. Prefer additive evolution over disruptive rewrites.
 
-## 8. Tagging Rules
-- Required tag groups: topic, skill level (Beginner/Intermediate/Advanced), audience role, format hints, source types, tech/stack, prerequisite flags
-- Hygiene: use singular nouns, canonical names, ≤12 tags per item, include aliases in metadata when helpful
+## Architecture and Structure
 
-## 9. Audience & Leader’s Lens Guidance
-- Segment audience by role × level 
-    - initial focus: 
-        -Data/Business Analyst
-        - Software/Automation Engineer
-        - Data Modeler
-        - Power BI Developer
-        - Manager/Leader
-    - Levels: Beginner, Intermediate, Advanced
-        - Defined levels based on topics covered and how they are categorized in reference sources
-- Every content item declares its target segments and prerequisites
-- Each lesson includes a 90–150 word Leader’s Lens for non-technical stakeholders
-- Every lesson intertwines practical skills with other relevant skills for example
-    - data governance
-    - security
-    - Data literacy
-    - Data Driven culture
-    - best practices
+### Localized governance
+- Use localized `Agents.md` files per scope with `applyTo` filters to limit context load.
+- Keep global instructions minimal; reference them from local docs when needed.
 
-## 10. Evidence & Citation Standards
-- Track URL, title, creator, platform, published/updated date, access timestamp, and rationale
-- Limit direct quotes; rely on paraphrasing with citations
-- Resolve conflicting sources with official guidance; note discrepancies
+### Content layout constraints
+- Content depth limit: four levels under `content/`.
+- Paths and Modules remain directories; Lessons are directories that contain session files—no deeper subfolders under a lesson.
+- Sessions are files stored within a lesson directory; they must include required session frontmatter.
+- Use kebab-case for all file and folder names.
 
-## 11. Minimal Workflow
-1. **Discover** high-signal sources
-2. **Extract** topics, prerequisites, questions, tasks
-3. **Normalize & dedupe** into canonical topics
-4. **Prioritize** by demand, relevance, dependencies
-5. **Plan** hierarchy in order (Learning Path → Lesson)
-6. **Tag** using required schema
-7. **Cite** every topic with rationale
-8. **Output** machine-readable + narrative summaries
+### Sessions and frontmatter
+- Sessions are date-prefixed files under a lesson (e.g., `2025-10-01-session-name.md`).
+- Required session frontmatter captures: session id/slug, created/updated timestamps, mode (quick/learning/deep), sources, and deliverables.
+- Sessions contribute to a local index; optional global indexers may aggregate frontmatter for discovery.
 
-## 12. Metadata Schema (Minimum)
-- LearningPath: `{ id, title, description, audience, prerequisites[], duration.totalHours, tags[], courses[] }`
-- Course: `{ id, title, outcome, prerequisites[], duration.hours, assessment, tags[], modules[] }`
-- Module: `{ id, title, description, prerequisites[], duration.hours, tags[], lessons[] }`
-- Lesson: `{ id, title, objectives[], prerequisites[], duration.minutes, outline[], practice, keyTerms[], tags[], citations[], leadersLens { summary, decisions, risks, kpis } }`
-- Citation: `{ url, title, sourceType, authorOrChannel, platform, publishedAt?, updatedAt?, accessedAt, rationale }`
-- TopicAlias (optional): `{ canonical, aliases[] }`
+### Research agent modes
+- Quick: breadth-first reconnaissance with tight time/recursion caps.
+- Learning: curated synthesis with stronger source hygiene and examples.
+- Deep: comprehensive analysis with full citations and cross-validation.
+- All modes are autonomous end-to-end and write both working and deliverable files.
 
-## 13. Storage & Exports
-- Canonical inventory: SQLite database at `content-inventory/content.db`
-- Exports: JSON/YAML under `content-inventory/exports/`
-- Optional Markdown mirrors for Obsidian under `content-inventory/obsidian/`
+## Development Workflow
 
-## 14. Constraints
-- Uphold factual accuracy and non-harmful content
-- Write in plain language with accessibility in mind (include alt-text guidance)
-- Note region-specific considerations explicitly
+### Stage gates and QA
+- Plan → Research → Script → Review → Publish, with explicit quality gates.
+- Use the handoff protocol for transitions and approvals.
+- Follow the “working file lifecycle” for drafts, notes, and final deliverables.
 
-## 15. Monitoring & Freshness
-- Cadence: weekly light scan, monthly comprehensive review, near real-time alerts from official feeds
-- Freshness SLA: fast-changing stacks ≥ every 90 days; slower content ≥ every 180 days; breaches auto-create review tickets
+### Contracts and safety
+- Databases and scripts must use parameterized inputs—never string-concatenated SQL.
+- Never commit secrets; use environment variables or `.env` files ignored by Git.
+- Prefer tiny, verifiable tests or runnable examples for new behaviors.
 
-## 16. SEO Strategy
-- Maintain `seo/clusters.yaml` linking topic clusters to pillars/paths
-- Each public asset brief lists 3–10 keywords, owning cluster, funnel intent; refresh clusters quarterly
+### Handoffs and AgentGraph
+- Use `.github/instructions/handoff-protocol.instructions.md` for the 9-component format.
+- Follow `.github/instructions/agent-graph.instructions.md` for allowed adjacencies and invariants.
+- Return to the Executive Producer for ambiguity requiring judgment, approvals, or blockers.
 
-## 17. Licensing
-- Code/scripts/schemas/templates: MIT
-- Public (blog/YouTube) content: CC BY 4.0
-- Paid academy content: CC BY-NC 4.0
-- Always paraphrase and cite sources; fair-use quotes only
+### Documentation and indexing
+- Keep `README.md` up to date for quickstart and troubleshooting.
+- Research sessions must write a working log and a deliverable; indexers may aggregate session frontmatter to catalogs.
 
-## 18. Definition of Done
-- Learning path contains ≥1 course; course contains ≥1 module; module contains ≥1 lesson
-- 100% of items complete required fields and tags
-- Each lesson provides practice and ≥1 citation
-- All claims backed by citations or demand signals
-- Exports validate against schema keys above
+## Governance
 
-## 19. Change Management
-- Log every revision in `CHANGELOG.md`
-- Re-run dedupe/tag hygiene when adding content
-- Follow stage progression strictly: Pillar → Path → Course → Module → Lesson
+- This constitution supersedes conflicting practices unless a localized `Agents.md` explicitly overrides with Executive Producer approval.
+- Amendments require: documented rationale, impact analysis, migration/compat plan, and approval checkpoint.
+- PR reviews verify compliance with this constitution and related instruction files:
+  - `.github/instructions/global-standards.instructions.md`
+  - `.github/instructions/handoff-protocol.instructions.md`
+  - `.github/instructions/agent-graph.instructions.md`
+  - `.github/instructions/content-standards.instructions.md`
+
+**Version**: 2.0.0 | **Ratified**: 2025-10-01 | **Last Amended**: 2025-10-31

@@ -1,6 +1,6 @@
 ---
 description: 'Strategic content planner analyzing demand and defining pillars'
-tools: ['search', 'fetch', 'codebase']
+tools: ['search', 'fetch', 'search/codebase']
 ---
 
 # Content Strategist

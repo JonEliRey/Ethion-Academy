@@ -2,8 +2,8 @@
 
 Auto-updated catalog of all research files. Organized by Pillar → Learning Path.
 
-**Last Updated**: 2025-10-05
-**Total Research Files**: 6
+**Last Updated**: 2025-10-25
+**Total Research Files**: 7
 
 ---
 
@@ -17,6 +17,7 @@ Auto-updated catalog of all research files. Organized by Pillar → Learning Pat
 | AIAndAutomation | 0 | - |
 | CloudAndInfrastructure | 0 | - |
 | LeadershipAndStrategy | 0 | - |
+| General | 1 | 2025-10-25 |
 
 ---
 
@@ -152,6 +153,15 @@ Auto-updated catalog of all research files. Organized by Pillar → Learning Pat
 - Key Finding: Excel users need a pedagogical bridge from cell-based thinking (VLOOKUP, formulas) to columnar ETL (Merge, M language).
 - Status: complete
 
+---
+
+### General
+**[Analysts’ Biggest Excel Pain Points — And How Power Query (Dataflows) Helps](General/20251025-analyst-pain-points-learning.md)** - learning-research | 2025-10-25 | 15 min | 20 sources
+- Learning Paths: Excel, PowerQuery
+- Subtopics: DataCleaning, DataIntegration, Automation, ErrorHandling, QueryFolding, Collaboration, Documentation, Visualization
+- Key Finding: Most Excel pain stems from manual, file-based workflows; Power Query/dataflows reduce cleaning/import toil and improve repeatability.
+- Status: complete
+
 **[Power Query Skills for Analysts – Comprehensive Learning Path](DataSkills/20251004-power-query-analyst-learning-path-quick.md)** - quick-research | 2025-10-04 | 30 min | 15 sources
 - Learning Paths: PowerQuery, DataLiteracy, DataGovernance
 - Subtopics: PowerQueryEditor, MLanguage, DataTransformation, QueryFolding, DataConnectors, DataQuality
@@ -173,6 +183,12 @@ Auto-updated catalog of all research files. Organized by Pillar → Learning Pat
 - Subtopics: PowerQueryEditor, MLanguage, DataTransformation, QueryFolding, DataConnectors, ParametersAndFunctions, AdvancedMerges, Formulas, VBA
 - Key Finding: Comprehensive 16-module learning path (32 hours) from Excel formulas/VBA to Power Query mastery, with integrated governance, quality, and literacy themes.
 - Status: completed
+
+**[Analysts’ Biggest Excel Pain Points — And How Power Query (Dataflows) Helps](General/20251025-analyst-pain-points-learning.md)** - learning-research | 2025-10-25 | 15 min | 20 sources
+- Learning Paths: Excel, PowerQuery
+- Subtopics: DataCleaning, DataIntegration, Automation, ErrorHandling, QueryFolding, Collaboration, Documentation, Visualization
+- Key Finding: Most Excel pain stems from manual, file-based workflows; Power Query/dataflows reduce cleaning/import toil and improve repeatability.
+- Status: complete
 
 **[Power Query for Excel Analysts: A Comprehensive Learning Path](DataSkills/20251004-power-query-for-excel-analysts-learning.md)** - learning-research | 2025-10-04 | 90 min | 42 sources
 - Learning Paths: PowerQuery, Excel, DataLiteracy, DataGovernance
@@ -200,6 +216,12 @@ Auto-updated catalog of all research files. Organized by Pillar → Learning Pat
 - Key Finding: A structured learning path from basic UI navigation to advanced M language and query optimization is crucial.
 - Status: complete
 
+**[Analysts’ Biggest Excel Pain Points — And How Power Query (Dataflows) Helps](General/20251025-analyst-pain-points-learning.md)** - quick-research | 2025-10-25 | 15 min | 20 sources
+- Learning Paths: Excel, PowerQuery
+- Subtopics: DataCleaning, DataIntegration, Automation, ErrorHandling, QueryFolding, Collaboration, Documentation, Visualization
+- Key Finding: Most Excel pain stems from manual, file-based workflows; Power Query/dataflows reduce cleaning/import toil and improve repeatability.
+- Status: complete
+
 ### Learning Content Research (45-90 min)
 **[Production Blueprint: Power Query Module 1 - Your First Refreshable Query](DataSkills/20251005-power-query-module-1-production-blueprint.md)** - learning-research | 2025-10-05 | 5 min | 6 sources
 - Learning Paths: PowerQuery, Excel
@@ -225,6 +247,7 @@ Auto-updated catalog of all research files. Organized by Pillar → Learning Pat
 - [FIXES-APPLIED-2025-10-04](FIXES-APPLIED-2025-10-04.md)
 - [README](README.md)
 - [topics-list](topics-list.md)
+- [20251025-analyst-pain-points-learning](General/20251025-analyst-pain-points-learning.md)
 
 ---
 

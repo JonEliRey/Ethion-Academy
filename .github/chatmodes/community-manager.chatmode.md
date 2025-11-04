@@ -1,6 +1,6 @@
 ---
 description: 'Engagement strategist and CTA optimizer'
-tools: ['search', 'fetch', 'codebase', 'editFiles']
+tools: ['search', 'fetch', 'search/codebase', 'edit/editFiles']
 ---
 
 # Community Manager
