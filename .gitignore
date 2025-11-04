@@ -1,0 +1,46 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor Files
+.vscode/settings.json
+.vscode/launch.json
+*.swp
+*.swo
+*~
+
+# Build & Temporary Files
+*.tmp
+*.temp
+tmp/
+temp/
+.cache/
+
+# Logs
+logs/
+*.log
+
+# Database Files (optional - may want to commit schema only)
+# *.db
+# *.sqlite
+
+# Environment & Secrets
+.env
+.env.local
+*.key
+*secret*
+*credential*
+
+# Node modules (if any)
+node_modules/
+
+# Python (if any)
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# PowerShell (if any)
+*.ps1xml

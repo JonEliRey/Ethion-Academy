@@ -20,7 +20,7 @@
 
 ### Specifications & Research
 - **`specs/`** - Feature specifications and technical designs
-- **`Research/`** - Market research and demand analysis data
+- **`research/`** - Market research and demand analysis data
 
 ## Archived Directories
 - **`docs/archive/2025-implementation/`** - Historical planning documents from meta-development phase
