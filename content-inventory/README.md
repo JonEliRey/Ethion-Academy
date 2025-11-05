@@ -43,7 +43,7 @@ Content metadata is tracked in SQLite database:
 ## Content Standards
 
 All content files must:
-- Include YAML frontmatter (see `.github/instructions/content.md`)
+- Include YAML frontmatter (see `.github/instructions/content.instructions.md`)
 - Follow naming conventions (kebab-case)
 - Use canonical tags from approved taxonomy
 - Include prerequisites and learning objectives

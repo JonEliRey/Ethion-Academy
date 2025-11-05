@@ -41,8 +41,8 @@ Successfully transformed Ethion Academy workspace from over-engineered meta-syst
 - **[content-inventory/](content-inventory/)** - Where content lives (currently empty, ready for first pilot)
 
 ### For Understanding Standards
-- **[.github/instructions/global.md](.github/instructions/global.md)** - Project-wide conventions
-- **[.github/instructions/content.md](.github/instructions/content.md)** - Content-specific standards
+- **[.github/instructions/global.instructions.md](.github/instructions/global.instructions.md)** - Project-wide conventions
+- **[.github/instructions/content.instructions.md](.github/instructions/content.instructions.md)** - Content-specific standards
 
 ### For Continuous Improvement
 - **[docs/decisions/](docs/decisions/)** - Pilot notes and decision records
@@ -186,7 +186,7 @@ In VS Code chat:
 4. Document experience in pilot notes
 
 ### Troubleshooting
-- **Agent confusion?** Check `.github/instructions/global.md`
+- **Agent confusion?** Check `.github/instructions/global.instructions.md`
 - **Template unclear?** See examples in agent files
 - **Database issues?** Run `pwsh scripts/init-database.ps1`
 - **Workflow stuck?** Review pilot notes from previous runs

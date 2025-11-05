@@ -96,8 +96,8 @@ The following agents are preserved in `.github/chatmodes/archive/` and can be re
 Agents follow instructions in this priority order:
 
 1. **This file (AGENTS.md)** - Global norms and agent behavior standards
-2. **`.github/instructions/global.md`** - Project-wide conventions (naming, security, version control, handoffs)
-3. **`.github/instructions/content.md`** - Content-specific rules (frontmatter, tagging, directory structure)
+2. **`.github/instructions/global.instructions.md`** - Project-wide conventions (naming, security, version control, handoffs)
+3. **`.github/instructions/content.instructions.md`** - Content-specific rules (frontmatter, tagging, directory structure)
 4. **Local Scope** - Task-specific guidance from user or workflow documents
 
 When instructions conflict, higher precedence wins. When in doubt, ask for clarification.

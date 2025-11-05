@@ -36,7 +36,7 @@
   - Project Purpose (2-3 sentences)
   - Global Norms (naming conventions, security boundaries, tone)
   - Active Agent Roster (3 agents: Content Strategist, SME, Librarian)
-  - Instruction Precedence (this file → .github/instructions/global.md → local scope)
+  - Instruction Precedence (this file → .github/instructions/global.instructions.md → local scope)
 
 - [ ] **1.1.3** Update `README.md`
   - Simplify to 1-page
@@ -154,7 +154,7 @@
   - `.github/instructions/handoff-protocol.instructions.md`
   - Relevant sections from `CONSTITUTION.md`
 
-- [ ] **1.4a.2** Create `.github/instructions/global.md`
+- [ ] **1.4a.2** Create `.github/instructions/global.instructions.md`
   - Project-wide conventions:
     - Naming patterns (kebab-case, file extensions)
     - Security boundaries (no PII, no secrets in repo)
@@ -162,7 +162,7 @@
     - Agent handoff protocol (required components)
   - Keep to 1-2 screens max
 
-- [ ] **1.4a.3** Create `.github/instructions/content.md`
+- [ ] **1.4a.3** Create `.github/instructions/content.instructions.md`
   - Content-specific rules:
     - Frontmatter schemas (Pillar, Path, Course, Module, Lesson)
     - Tagging conventions (role, level, topic, format, source_type, tech_stack)
@@ -202,7 +202,7 @@
 
 **Verification:**
 
-- [ ] Active agents reference new instruction paths (`.github/instructions/global.md` and `content.md`)
+- [ ] Active agents reference new instruction paths (`.github/instructions/global.instructions.md` and `content.instructions.md`)
 - [ ] Original instruction files archived successfully
 
 ---

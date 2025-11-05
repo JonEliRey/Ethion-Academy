@@ -145,7 +145,7 @@ With approved pillar in place:
 **Issue:** Agent doesn't have all needed context
 
 **Solution:**
-- Ensure handoff message includes all 9 required components (see `.github/instructions/global.md`)
+- Ensure handoff message includes all 9 required components (see `.github/instructions/global.instructions.md`)
 - Attach all relevant files explicitly
 - Provide 2-4 paragraph context summary
 

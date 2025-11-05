@@ -18,7 +18,7 @@
 ### Creating a Pillar
 1. Copy `pillar-template.md` to `content-inventory/pillars/pillar-[name].md`
 2. Replace all `[PLACEHOLDER]` text with actual content
-3. Follow frontmatter schema from `.github/instructions/content.md`
+3. Follow frontmatter schema from `.github/instructions/content.instructions.md`
 4. Complete all required sections (Overview, Scope, Target Audience, Key Outcomes)
 5. Get SME validation before marking as "approved"
 
@@ -35,7 +35,7 @@
 All templates include YAML frontmatter with:
 - **Required fields** - Cannot be omitted
 - **Status values** - Must use canonical values (draft, in-review, approved, published, archived)
-- **Tag categories** - Must follow taxonomy (see `.github/instructions/content.md`)
+- **Tag categories** - Must follow taxonomy (see `.github/instructions/content.instructions.md`)
 
 ### Placeholder Format
 - Use `[UPPERCASE PLACEHOLDER TEXT]` for sections requiring user input
