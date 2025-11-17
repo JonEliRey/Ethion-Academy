@@ -1,5 +1,5 @@
 ---
-mode: 'librarian'
+agent: 'librarian'
 description: 'Guide Librarian through content cataloging and cross-referencing'
 tools: ['search/codebase', 'runCommands', 'edit/editFiles']
 ---

@@ -8,7 +8,7 @@ Ethion Academy creates high-quality technical learning content focused on data e
 
 ### Naming Conventions
 - **Files:** Use kebab-case (e.g., `pillar-template.md`, `content-strategist.chatmode.md`)
-- **Directories:** Use kebab-case (e.g., `content-inventory/`, `.github/chatmodes/`)
+- **Directories:** Use kebab-case (e.g., `pillar-dataops-engineering/`, `.github/chatmodes/`)
 - **IDs:** Use kebab-case prefixed by type (e.g., `pillar-dataops-engineering`, `path-airflow-orchestration`)
 
 ### Security Boundaries
@@ -29,48 +29,72 @@ Ethion Academy creates high-quality technical learning content focused on data e
 - **Branching:** Use descriptive names with task numbers when applicable
   - Example: `feature/011-content-strategist-agent`
 
+### Localized Instructions
+
+- Create an `Agent.md` in any pillar/path/course/module/lesson folder that needs rules beyond the global instructions.
+- Keep directives scoped to that folder and update them whenever the local context changes.
+- Refer to these local files after global instructions but before ad-hoc user requests.
+
+### Scribe Protocol
+
+- When a task is expected to exceed ~15 minutes or span multiple sessions, follow `.github/instructions/scribe-protocol.instructions.md`.
+- Initialize the log using `templates/scribe-log-template.md` under `docs/working-notes/{agent-id}/` and keep entries timestamped with sources.
+- Archive completed logs in `docs/working-notes/archive/` unless the user explicitly approves deletion.
+
 ## Active Agent Roster
 
 ### 1. Content Strategist
-**File:** `.github/chatmodes/content-strategist.chatmode.md`
+
+**File:** `.github/agents/content-strategist.agent.md`
 
 **Purpose:** Analyzes market demand and proposes content pillars and learning paths based on data-driven insights.
 
 **Key Responsibilities:**
+
 - Conduct demand analysis (job postings, search trends, community signals)
 - Propose new pillars with clear scope and target audience
 - Define learning path structures within approved pillars
 - Hand off proposals to SME for technical validation
+
+**Tools:** `search`, `fetch`, `runSubagent` (autonomous research), `githubRepo` (code example discovery)
 
 **When to Use:** Starting new pillar/path planning or analyzing content gaps
 
 ---
 
 ### 2. Subject Matter Expert (SME)
-**File:** `.github/chatmodes/sme.chatmode.md`
+
+**File:** `.github/agents/sme.agent.md`
 
 **Purpose:** Validates technical accuracy, identifies prerequisites, and ensures content aligns with industry best practices.
 
 **Key Responsibilities:**
+
 - Review proposed pillar and path scopes for technical accuracy
 - Identify prerequisites and correct learning sequence
 - Suggest authoritative sources (official docs, standards)
 - Flag missing critical topics or incorrect assumptions
+
+**Tools:** `search`, `fetch`, `usages` (symbol references), `problems` (lint/compile errors), `runSubagent` (autonomous verification)
 
 **When to Use:** Validating technical content before approval
 
 ---
 
 ### 3. Librarian
-**File:** `.github/chatmodes/librarian.chatmode.md`
+
+**File:** `.github/agents/librarian.agent.md`
 
 **Purpose:** Catalogs approved content in the database and maintains content inventory organization.
 
 **Key Responsibilities:**
+
 - Add approved pillars, paths, courses, modules, and lessons to database
 - Maintain content relationships and prerequisites
 - Generate reports on content inventory status
 - Ensure frontmatter and metadata consistency
+
+**Tools:** `search`, `fetch`, `editFiles` (database scripts), `runSubagent` (autonomous cross-reference research)
 
 **When to Use:** After content approval, to catalog and organize
 
@@ -98,7 +122,9 @@ Agents follow instructions in this priority order:
 1. **This file (AGENTS.md)** - Global norms and agent behavior standards
 2. **`.github/instructions/global.instructions.md`** - Project-wide conventions (naming, security, version control, handoffs)
 3. **`.github/instructions/content.instructions.md`** - Content-specific rules (frontmatter, tagging, directory structure)
-4. **Local Scope** - Task-specific guidance from user or workflow documents
+4. **`.github/instructions/scribe-protocol.instructions.md`** - Research logging requirements for long-running work
+5. **Local `Agent.md` files** - Folder-level context that extends the global instructions
+6. **Local Scope** - Task-specific guidance from user or workflow documents
 
 When instructions conflict, higher precedence wins. When in doubt, ask for clarification.
 
@@ -108,7 +134,8 @@ When instructions conflict, higher precedence wins. When in doubt, ask for clari
 
 When passing work between agents, use the standard handoff format:
 
-### Required Components:
+### Required Components
+
 1. **From Agent** - Source agent name
 2. **To Agent** - Target agent name (with `@mention` syntax)
 3. **Reason** - Why handoff is needed (1 sentence)
@@ -120,6 +147,7 @@ When passing work between agents, use the standard handoff format:
 9. **Executive Producer Instruction** - Explicit instruction to switch chat mode
 
 **Example:**
+
 ```markdown
 ## 🔄 HANDOFF REQUIRED
 
@@ -152,8 +180,10 @@ Completed demand analysis showing 1,500+ job postings requiring Airflow and dbt 
 
 ## Getting Started
 
-1. **Creating New Content:** Load `@content-strategist` to analyze demand and propose pillar
-2. **Validating Proposals:** Load `@sme` to review technical accuracy
-3. **Organizing Content:** Load `@librarian` to catalog approved work
+1. **Creating New Content:** Use `@content-strategist` agent to analyze demand and propose pillar
+2. **Validating Proposals:** Use `@sme` agent to review technical accuracy
+3. **Organizing Content:** Use `@librarian` agent to catalog approved work
+
+**Note:** Agents now use VS Code 1.106+ custom agent format (`.agent.md`) with lean frontmatter and anchored sections for improved tool management and handoff clarity.
 
 For detailed workflows, see `docs/workflows/` directory.

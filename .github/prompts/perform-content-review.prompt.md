@@ -1,7 +1,7 @@
 ---
-mode: 'editor'
+agent: 'content-strategist'
 description: 'Guide Editor through comprehensive content quality review'
-tools: ['codebase', 'editFiles']
+tools: ['search/codebase', 'edit/editFiles']
 ---
 
 # Perform Content Review
