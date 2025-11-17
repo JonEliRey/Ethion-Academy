@@ -12,6 +12,25 @@ Ethion Academy is a content creation workspace that combines AI agents, structur
 
 📋 **[docs/workflows/](docs/workflows/)** - Step-by-step content creation workflows
 
+## Content Layout
+
+All learning content lives directly at the repository root using type-prefixed folders. Each level owns its markdown file inside its folder, keeping navigation shallow and self-explanatory:
+
+```
+pillar-{pillar-name}/
+  pillar-{pillar-name}.md
+  path-{path-name}/
+    path-{path-name}.md
+    course-{course-name}/
+      course-{course-name}.md
+      module-{module-name}/
+        module-{module-name}.md
+        lesson-{lesson-name}/
+          lesson-{lesson-name}.md
+```
+
+No extra taxonomy directories (e.g., `pillars/`, `courses/`) are used; the prefix plus nesting capture the full hierarchy.
+
 ## Current Status
 
 **Phase:** MVP Setup & Foundation (Phase 1 in progress)  
@@ -24,6 +43,7 @@ See **[AGENTS.md](AGENTS.md)** for:
 - Global norms (naming, security, tone)
 - Active agent roster and responsibilities
 - Instruction precedence and handoff protocol
+- Expectations that every major folder maintains a local `Agent.md` describing context-specific guidance that does not belong in the global instructions
 
 ## For Contributors
 
@@ -36,7 +56,7 @@ See **[AGENTS.md](AGENTS.md)** for:
 
 - **Agents:** VS Code AI Chat Modes
 - **Templates:** Markdown with YAML frontmatter
-- **Database:** SQLite (content inventory)
+- **Database:** Optional SQLite artifacts when needed for reporting
 - **Scripts:** PowerShell (automation)
 
 ---

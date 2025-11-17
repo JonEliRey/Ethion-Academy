@@ -1,5 +1,5 @@
 ---
-mode: 'scriptwriter'
+agent: 'content-strategist'
 description: 'Guide Scriptwriter through creating comprehensive lesson outlines and briefs'
 tools: ['search', 'fetch', 'codebase', 'editFiles']
 ---

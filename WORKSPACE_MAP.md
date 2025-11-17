@@ -5,9 +5,23 @@
 ## Active Directories
 
 ### Core Operations
+- **`pillar-*/`** - Root-level pillar folders containing every learning artifact. Each pillar nests paths, courses, modules, and lessons using type prefixes:
+
+```
+pillar-sample/
+  pillar-sample.md
+  path-dataops-foundations/
+    path-dataops-foundations.md
+    course-airflow-fundamentals/
+      course-airflow-fundamentals.md
+      module-dag-design/
+        module-dag-design.md
+        lesson-branching-logic/
+          lesson-branching-logic.md
+```
+
 - **`.github/chatmodes/`** - AI agent definitions (Content Strategist, SME, Librarian)
 - **`.github/instructions/`** - Global standards and content guidelines for agents
-- **`content-inventory/`** - Published and in-progress content organized by pillar → path → course → module → lesson
 - **`templates/`** - Reusable templates for all content levels (pillar, path, course, module, lesson)
 
 ### Documentation & Scripts
@@ -16,7 +30,7 @@
   - `docs/workflows/` - Content creation workflows
   - `docs/governance/` - Project governance and policies
   - `docs/archive/` - Historical planning documents
-- **`scripts/`** - PowerShell automation tools for database management and validation
+- **`scripts/`** - PowerShell automation tools for optional reporting or database work
 
 ### Specifications & Research
 - **`specs/`** - Feature specifications and technical designs
@@ -33,6 +47,6 @@
 
 ## Navigation Tips
 1. **To create content:** Start with [AGENTS.md](AGENTS.md) to understand available agents
-2. **To understand structure:** Review templates in `templates/` directory
-3. **To validate content:** Check `.github/instructions/` for standards and conventions
+2. **To understand structure:** Inspect root-level `pillar-*` folders and review templates in `templates/`
+3. **To capture localized rules:** Maintain an `Agent.md` inside any folder that needs instructions beyond the global standards
 4. **To track progress:** See `IMPLEMENTATION-TASKS.md` for current initiatives

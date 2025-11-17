@@ -1,5 +1,5 @@
 ---
-mode: 'content-strategist'
+agent: 'content-strategist'
 description: 'Interactive workflow to guide Content Strategist through pillar creation'
 tools: ['search', 'fetch', 'codebase']
 ---

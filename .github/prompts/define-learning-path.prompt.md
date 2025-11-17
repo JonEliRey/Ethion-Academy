@@ -1,7 +1,7 @@
 ---
-mode: 'content-strategist'
+agent: 'content-strategist'
 description: 'Interactive workflow for creating learning paths under an approved pillar'
-tools: ['search', 'fetch', 'codebase']
+tools: ['search', 'fetch', 'search/codebase']
 ---
 
 # Define Learning Path
