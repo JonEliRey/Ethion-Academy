@@ -18,7 +18,7 @@ tags:
   - "m-language"
 estimated_duration: "4-5 hours"
 prerequisites:
-  - "Confident Excel navigation and basic formulas"
+  - "Confident Excel navigation (workbooks, worksheets, cells, basic operations)"
   - "Experience creating and working with pivot tables"
   - "Power Query and Power Pivot add-ins enabled in Excel"
 ---
@@ -242,7 +242,7 @@ By completing this course, you will be able to:
 ## Prerequisites
 
 ### Required Skills
-- **Excel Fundamentals**: Confident navigation, formulas (SUM, AVERAGE, IF, VLOOKUP), understanding of worksheets, rows, columns. Should be able to create and modify spreadsheets independently.
+- **Excel Fundamentals**: Confident navigation of workbooks, worksheets, cells, and basic Excel operations. Should be comfortable working in Excel and understand how data is organized in rows and columns.
 - **Pivot Table Experience**: Ability to create pivot tables, add fields to rows/columns/values areas, apply basic filtering. This is critical foundation for Power Pivot concepts.
 - **Data Concepts**: Understanding of tables, columns, data types (text, numbers, dates), and how data is organized. Some exposure to databases helpful but not required.
 

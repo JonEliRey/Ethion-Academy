@@ -50,22 +50,22 @@ By the end of this lesson, you will:
 1. **8:00 AM** - Email IT requesting latest sales export
 2. **8:45 AM** - Receive CSV file, download to desktop
 3. **8:50 AM** - Open last week's Excel workbook
-4. **8:52 AM** - Copy formulas to new sheet, paste CSV data
+4. **8:52 AM** - Copy structure to new sheet, paste CSV data
 5. **9:05 AM** - Fix #VALUE errors from bad data formatting
 6. **9:15 AM** - Manually remove duplicate rows
 7. **9:25 AM** - Fix customer names (inconsistent capitalization)
-8. **9:35 AM** - Add product category column using nested IFs
+8. **9:35 AM** - Add product category column using lookups
 9. **9:50 AM** - Create pivot table, format dashboard
 10. **10:05 AM** - Email report to stakeholders
 
 **Time**: 2 hours, 5 minutes  
-**Error Risk**: High (manual copy-paste, formula extension)  
+**Error Risk**: High (manual copy-paste, cell reference errors)  
 **Next Week**: Repeat all steps
 
 ### Problems with Manual Workflows
 
 1. **Time Waste**: Same steps every week/day/month
-2. **Error Prone**: Copy-paste mistakes, formula errors
+2. **Error Prone**: Copy-paste mistakes, data entry errors
 3. **Not Scalable**: Can't handle 10x data growth
 4. **Knowledge Locked**: Only you know the steps
 5. **Audit Nightmare**: Can't prove what you did last quarter
@@ -191,7 +191,7 @@ When planning any analytics project, ask:
 ✅ **Repetitive**: You do it more than 3 times  
 ✅ **Predictable**: Data structure is consistent  
 ✅ **Time-Consuming**: Manual process takes >30 minutes  
-✅ **Error-Prone**: Copy-paste or manual formulas involved  
+✅ **Error-Prone**: Copy-paste or manual data manipulation involved  
 ✅ **Scalable Need**: Data volume growing  
 ✅ **Shareable**: Others need to run same analysis  
 
@@ -224,7 +224,7 @@ If you save 45 minutes weekly (45 min × 52 weeks = 39 hours/year), even 4 hours
 ### Manual Workflow Characteristics
 
 - **Workbook Proliferation**: Separate file per week/month
-- **Formula Sprawl**: Complex nested formulas in cells
+- **Cell-Based Logic**: Complex operations spread across many cells  
 - **Copy-Paste Heavy**: Ctrl+C / Ctrl+V is most-used command
 - **Hidden Steps**: Only you know what you did
 - **Fragile**: Column moves break everything
@@ -233,7 +233,7 @@ If you save 45 minutes weekly (45 min × 52 weeks = 39 hours/year), even 4 hours
 ### Automated Workflow Characteristics
 
 - **Single Workbook**: One file, refresh updates data
-- **Query Logic**: Transformations documented in Power Query
+- **Data Manipulation**: Power Query transformations documented in queries
 - **Refresh Button**: One-click update
 - **Transparent**: Anyone can see query steps
 - **Robust**: Handles reasonable structure changes

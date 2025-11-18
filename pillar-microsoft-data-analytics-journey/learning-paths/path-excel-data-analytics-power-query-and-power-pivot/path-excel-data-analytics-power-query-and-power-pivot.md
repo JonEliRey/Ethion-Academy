@@ -7,7 +7,7 @@ target_audience:
   level: "intermediate"
   context: "Excel-proficient analysts who manually clean and analyze data, ready to automate workflows with Power Query and Power Pivot. Comfortable with pivot tables and basic Excel formulas."
 prerequisites:
-  - "Confident Excel navigation and basic formulas"
+  - "Confident Excel navigation (workbooks, worksheets, cells, basic operations)"
   - "Experience creating and working with pivot tables"
   - "Understanding of data tables and basic data concepts"
   - "Permission to install Power Query and Power Pivot add-ins"
@@ -89,7 +89,7 @@ By completing this learning path, you will be able to:
 ## Prerequisites
 
 ### Required Knowledge
-- **Excel Fundamentals**: Confident navigation, basic formulas (SUM, AVERAGE, IF), understanding of rows, columns, and worksheets. You should be comfortable creating and modifying spreadsheets.
+- **Excel Fundamentals**: Confident navigation of workbooks, worksheets, cells, and basic Excel operations. You should be comfortable working in Excel and understand how data is organized.
 - **Pivot Table Experience**: Ability to create basic pivot tables, add fields, and understand how they summarize data. This foundation is critical for Power Pivot concepts.
 - **Data Concepts**: Understanding of tables, columns, rows, and basic data types (text, numbers, dates). Familiarity with how data is organized in databases or structured files.
 

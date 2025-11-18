@@ -72,6 +72,7 @@ Before starting this module:
 - [ ] Administrator privileges or permission to enable Excel add-ins
 - [ ] 2-3 GB free disk space for World Wide Importers dataset
 - [ ] Internet connection for downloading materials
+- [ ] Comfortable with Excel basics (navigation, pivot tables, basic operations)
 
 ---
 

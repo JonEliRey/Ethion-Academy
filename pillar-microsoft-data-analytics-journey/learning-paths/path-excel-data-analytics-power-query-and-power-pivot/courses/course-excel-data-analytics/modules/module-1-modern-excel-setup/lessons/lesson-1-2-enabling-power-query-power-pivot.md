@@ -112,9 +112,9 @@ Power Query is Excel's data connection and transformation engine. It appears as 
 ### What is Power Pivot?
 
 Power Pivot is Excel's data modeling engine that allows you to:
-- Load millions of rows (vs Excel's 1M limit)
+- Load millions of rows (vs Excel's 1M row limit)
 - Create relationships between tables
-- Write DAX formulas for advanced calculations
+- Write DAX measures for advanced calculations (not Excel formulas)
 - Build sophisticated analytical models
 
 ### Check if Power Pivot is Already Enabled
